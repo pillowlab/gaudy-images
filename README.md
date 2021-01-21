@@ -3,6 +3,7 @@ This is the repository code for "High-contrast 'gaudy' images improve the traini
 
 The main gaudy transformation is as follows:
 
+(/extra/gaudy_transformation.png)
 
 
 Code for this paper will be uploaded soon.
