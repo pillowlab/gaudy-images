@@ -9,23 +9,46 @@ Link to paper: [put link here]
 * Training on *gaudy images* yields better DNN prediction than training on the same number of normal images.
 * In our paper, we find this is because gaudy images overemphasize edges in the image.
 
+
 # gaudy transformation
 To transform a normal, colorful image into its gaudy version:
 
 <img src="/extra/gaudy_transformation.png" width="741" height="221">
 
-In code:
+In code (three lines!):
 
 ```python
+
 img = download_image()  # download example img with shape 224 x 224 x 3
-mean_img = np.mean(img)  # take mean across all pixels and channels
 img_gaudy = np.copy(img)
+
+mean_img = np.mean(img)  # take mean across all pixels and channels
 img_gaudy[img_gaudy < mean_img] = 0   # transform each pixel to the rails
 img_gaudy[img_gaudy >= mean_img] = 255
+
 plt.imshow(img)
 plt.imshow(img_gaudy)
 ```
 
+# this repository
+This repository contains code that was used to generate figures in our paper.
+We use Python XX with tensorflow XX and keras XX.
 
-Code for this paper will be uploaded soon.
-If you need it before then, please contact the first author at bcowley at princeton edu.
+*Warning:* This is research code, not production code. The best use is to see how 
+some code works, and then copy/paste/steal it for your own use. 
+*Warning:* We do not include our image dataset. We use a subset of 
+images from the <a href="https://yahooresearch.tumblr.com/post/89783581601/one-hundred-million-creative-commons-flickr-images-for" target="_blank">Yahoo/FlickR image set (YFCC100M)</a>, which is freely available. You could also use ImageNet.
+
+We utilize deep neural networks already trained on ImageNet. These DNNs are easily accessible
+within Keras.
+
+Code for each figure is stored in separate folders (e.g., fig1, fig2, ...).
+
+If you have a question with the repository, please raise an issue through github on this project.
+
+
+
+
+
+
+
