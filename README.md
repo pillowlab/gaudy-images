@@ -36,11 +36,10 @@ We use Python XX with tensorflow XX and keras XX.
 
 *Warning:* This is research code, not production code. The best use is to see how 
 some code works, and then copy/paste/steal it for your own use. 
-*Warning:* We do not include our image dataset. We use a subset of 
+*Warning:* We do not include our image dataset due to memory constraints/permissions. We use a subset of 
 images from the <a href="https://yahooresearch.tumblr.com/post/89783581601/one-hundred-million-creative-commons-flickr-images-for" target="_blank">Yahoo/FlickR image set (YFCC100M)</a>, which is freely available. You could also use ImageNet.
 
-We utilize deep neural networks already trained on ImageNet. These DNNs are easily accessible
-within Keras.
+We utilize deep neural networks already trained on ImageNet. These DNNs are available within Keras.
 
 Code for each figure is stored in separate folders (e.g., fig1, fig2, ...).
 
